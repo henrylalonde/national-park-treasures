@@ -1,9 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://c11u7gkwhdno2"]
+[gd_scene load_steps=20 format=3 uid="uid://c11u7gkwhdno2"]
 
 [ext_resource type="Texture2D" uid="uid://c73pef2p0da7c" path="res://Characters/Character Raccoon/raccoon-sheet-6.png" id="1_hyd5e"]
 [ext_resource type="Script" uid="uid://bxoxemsvmtwik" path="res://Characters/Rigid Raccoon/rigid_raccon.gd" id="1_q4sjk"]
 [ext_resource type="Gradient" uid="uid://crrlo3ow0wsq6" path="res://Characters/Character Raccoon/tail_gradient.tres" id="2_q4sjk"]
 [ext_resource type="Script" uid="uid://b4dtln61ybjv8" path="res://Characters/Rigid Raccoon/rigid_tail.gd" id="4_q4sjk"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q4sjk"]
+friction = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vd27f"]
 size = Vector2(16, 10)
@@ -608,6 +611,7 @@ _data = {
 }
 
 [node name="Raccoon" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_q4sjk")
 script = ExtResource("1_q4sjk")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
