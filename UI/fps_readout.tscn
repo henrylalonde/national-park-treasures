@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://5clv6aaqmavu"]
+
+[ext_resource type="Script" uid="uid://kuryys2b8s4k" path="res://UI/fps_readout.gd" id="1_j3ele"]
+[ext_resource type="FontFile" uid="uid://de0svwto3lpjm" path="res://UI/Fonts/Micro_5/Micro5-Regular.ttf" id="1_tiahg"]
+
+[node name="FPS Readout" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_tiahg")
+theme_override_font_sizes/font_size = 22
+text = "FPS"
+script = ExtResource("1_j3ele")

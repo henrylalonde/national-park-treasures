@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://ciinu4i0xk0le"]
+
+[ext_resource type="PackedScene" uid="uid://bhxj0o80kaxc6" path="res://Characters/Character Raccoon/raccoon.tscn" id="1_nxrqf"]
+[ext_resource type="PackedScene" uid="uid://5clv6aaqmavu" path="res://UI/fps_readout.tscn" id="2_hj615"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_podvm"]
+size = Vector2(8, 8)
+
+[sub_resource type="Gradient" id="Gradient_hj615"]
+colors = PackedColorArray(0.325494, 0.521332, 0.283022, 1, 0.343409, 0.213685, 0.124769, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hj615"]
+gradient = SubResource("Gradient_hj615")
+width = 8
+height = 8
+use_hdr = true
+fill_to = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hj615"]
+size = Vector2(480, 20)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p5beq"]
+gradient = SubResource("Gradient_hj615")
+width = 480
+height = 20
+use_hdr = true
+fill_to = Vector2(0, 1)
+
+[node name="Test Map" type="Node"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Platform2" type="StaticBody2D" parent="Node"]
+position = Vector2(320, 245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Platform2"]
+shape = SubResource("RectangleShape2D_podvm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Platform2"]
+texture = SubResource("GradientTexture2D_hj615")
+
+[node name="Platform3" type="StaticBody2D" parent="Node"]
+position = Vector2(343, 231)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Platform3"]
+shape = SubResource("RectangleShape2D_podvm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Platform3"]
+texture = SubResource("GradientTexture2D_hj615")
+
+[node name="Platform4" type="StaticBody2D" parent="Node"]
+position = Vector2(366, 218)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Platform4"]
+shape = SubResource("RectangleShape2D_podvm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Platform4"]
+texture = SubResource("GradientTexture2D_hj615")
+
+[node name="Platform1" type="StaticBody2D" parent="Node"]
+position = Vector2(274, 256)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Platform1"]
+shape = SubResource("RectangleShape2D_podvm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Platform1"]
+texture = SubResource("GradientTexture2D_hj615")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(240, 270)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_hj615")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+texture = SubResource("GradientTexture2D_p5beq")
+
+[node name="Raccoon" parent="." instance=ExtResource("1_nxrqf")]
+position = Vector2(239, 251)
+
+[node name="FPS Readout" parent="." instance=ExtResource("2_hj615")]
+offset_left = 5.0
+offset_right = 45.0

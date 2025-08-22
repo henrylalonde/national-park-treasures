@@ -1,0 +1,9 @@
+[gd_resource type="Gradient" format=3 uid="uid://crrlo3ow0wsq6"]
+
+[resource]
+resource_name = "RaccoonTailGradient"
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1)
+colors = PackedColorArray(0.607843, 0.670588, 0.698039, 1, 0.384314, 0.333333, 0.396078, 1, 0.607843, 0.670588, 0.698039, 1, 0.384314, 0.333333, 0.396078, 1, 0.607843, 0.670588, 0.698039, 1, 0.384314, 0.333333, 0.396078, 1, 0.607843, 0.670588, 0.698039, 1, 0.384314, 0.333333, 0.396078, 1, 0.384314, 0.333333, 0.396078, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 8
