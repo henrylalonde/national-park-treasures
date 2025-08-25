@@ -181,7 +181,7 @@ func _fall_left() -> void:
 		animation_player.play("fall_left")
 
 
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	if next_state != "":
 		current_state = next_state
 		next_state = ""
